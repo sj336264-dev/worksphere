@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkSphere Ltd. | Global Remote Work & Career Opportunities</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, rgba(124, 58, 237, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- Top Announcement Bar -->
+    <div
+        class="bg-gradient-to-r from-brand-600 via-accent-600 to-brand-700 text-white text-xs md:text-sm py-2.5 px-4 text-center font-medium shadow-inner flex items-center justify-center gap-2">
+        <span
+            class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-400 text-slate-900 uppercase tracking-wider">Verified
+            100% Free</span>
+        <span>Zero Registration Fee &bull; No Investment Required &bull; Guaranteed USD ($) Payments</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div
+                        class="relative w-11 h-11 flex items-center justify-center rounded-xl bg-gradient-to-tr from-brand-600 to-accent-500 text-white shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+                        <!-- Custom SVG Logo: Spherical Work Network -->
+                        <svg class="w-7 h-7 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <circle cx="12" cy="12" r="9" stroke-width="1.5" stroke-dasharray="2 2" />
+                            <ellipse cx="12" cy="12" rx="9" ry="4" stroke-width="1.5" />
+                            <circle cx="12" cy="12" r="3" class="fill-white/20" stroke-width="1.5" />
+                            <path d="M12 3v18M3 12h18" stroke-width="1" stroke-linecap="round" />
+                        </svg>
+                        <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                        </span>
+                    </div>
+                    <div>
+                        <span
+                            class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 block leading-none">WorkSphere
+                            <span class="text-brand-600">Ltd.</span></span>
+                        <span
+                            class="text-[10px] font-semibold uppercase tracking-widest text-slate-500 block mt-1">Global
+                            Remote Careers</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                    <a href="#jobs" class="hover:text-brand-600 transition-colors">Available Projects</a>
+                    <a href="#payments" class="hover:text-brand-600 transition-colors">Payment Terms</a>
+                    <a href="#process" class="hover:text-brand-600 transition-colors">How It Works</a>
+                    <a href="#faq" class="hover:text-brand-600 transition-colors">FAQs</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <button onclick="openModal('hr')"
+                        class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-xs uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 transition-colors">
+                        <i class="fa-brands font-bold text-sky-500 text-sm"></i> HR Telegram
+                    </button>
+                    <a href="#jobs"
+                        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        Browse Tasks <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+            <a href="#jobs" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Available
+                Projects</a>
+            <a href="#payments" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Payment
+                Terms</a>
+            <a href="#process" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">How It
+                Works</a>
+            <a href="#faq" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">FAQs</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <button onclick="openModal('hr')"
+                    class="w-full text-center py-2.5 rounded-xl font-semibold text-sm text-black-700 bg-black-100">
+                    <i class="fa-brands font-bold text-white-500"></i> Contact HR-Manager
+                </button>
+                <button onclick="openModal('submit')"
+                    class="w-full text-center py-2.5 rounded-xl font-semibold text-sm text-white bg-brand-600">
+                    <i class="fa-paper-plane"></i> Submit Completed Work
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-gradient pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold mb-6">
+                        <i class="fa-solid fa-shield-check text-emerald-500"></i> No Upfront Fee or Registration Charges
+                        Ever
+                    </div>
+                    <h1
+                        class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                        Earn USD ($) Working From Home with <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">WorkSphere
+                            Ltd.</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Access freelance micro-tasks, audio transcription, graphic design, and data entry projects. Get
+                        direct payouts in US Dollars straight to your account via Telegram direct communication.
+                    </p>
+
+                    <!-- Call To Action Group -->
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#jobs"
+                            class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors">
+                            Explore Active Projects
+                        </a>
+                        <button onclick="openModal('hr')"
+                            class="w-full sm:w-auto px-7 py-4 rounded-xl font-bold text-white bg-brand-600 hover:bg-brand-700 transition-colors text-center shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-brands text-sky-500 text-lg"></i> Talk to HR Manager
+                        </button>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div
+                        class="mt-10 pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="font-heading font-bold text-2xl text-slate-900">$100% Free</div>
+                            <div class="text-xs text-slate-500 font-medium">No Deposit Required</div>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-2xl text-slate-900">Direct USD</div>
+                            <div class="text-xs text-slate-500 font-medium">ACH, Wise, Payoneer</div>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-2xl text-slate-900">Instant HR</div>
+                            <div class="text-xs text-slate-500 font-medium">Telegram Support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Highlight Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative glow -->
+                        <div
+                            class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-500 to-accent-500 opacity-30 blur-xl">
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="relative bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-100">
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-dollar-sign text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-slate-900 text-sm">Payout Status</h3>
+                                        <p class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                            Processing USD Payouts
+                                        </p>
+                                    </div>
+                                </div>
+                                <span
+                                    class="text-xs font-mono font-semibold bg-slate-100 px-2.5 py-1 rounded-md text-slate-600">WorkSphere
+                                    USD</span>
+                            </div>
+
+                            <!-- Highlights List -->
+                            <div class="space-y-4">
+                                <div class="p-3.5 bg-slate-50 rounded-2xl flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-brand-600 text-lg mt-0.5"></i>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">No
+                                            Registration Fees</h4>
+                                        <p class="text-xs text-slate-600">Never pay anyone money to work. WorkSphere is
+                                            100% free for candidates.</p>
+                                    </div>
+                                </div>
+
+                                <div class="p-3.5 bg-slate-50 rounded-2xl flex items-start gap-3">
+                                    <i class="fa-solid fa-building-columns text-brand-600 text-lg mt-0.5"></i>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">USA
+                                            Account Requirement</h4>
+                                        <p class="text-xs text-slate-600">Payouts sent via US bank accounts, Wire, ACH,
+                                            Wise, or USD Telegram wallets.</p>
+                                    </div>
+                                </div>
+
+                                <div class="p-3.5 bg-slate-50 rounded-2xl flex items-start gap-3">
+                                    <i class="fa-brands text-sky-500 text-lg mt-0.5"></i>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Direct
+                                            Telegram Submission</h4>
+                                        <p class="text-xs text-slate-600">Submit completed task files directly to our
+                                            project manager on Telegram.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button onclick="openModal('hr')"
+                                class="w-full mt-6 py-3.5 px-4 rounded-xl font-bold text-sm bg-slate-900 hover:bg-slate-800 text-white flex items-center justify-center gap-2 shadow-md transition-colors">
+                                <i class="fa-brands text-sky-400 text-base"></i> Connect with HR Manager Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- US Account Requirement Banner -->
+    <section id="payments" class="py-12 bg-gradient-to-r from-slate-900 via-brand-900 to-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/15 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 shrink-0 rounded-xl bg-amber-400/20 text-amber-300 flex items-center justify-center text-2xl border border-amber-400/30">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <div>
+                        <span
+                            class="bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[10px] uppercase font-bold px-2 py-0.5 rounded tracking-wider">Important
+                            Payment Term</span>
+                        <h3 class="font-heading font-bold text-xl md:text-2xl mt-1 text-white">USA Bank Account or USD
+                            Receiving Wallet Required</h3>
+                        <p class="text-slate-300 text-sm mt-1 max-w-3xl">
+                            All salary disbursements for WorkSphere projects are processed strictly in <strong>US
+                                Dollars ($)</strong>. Clients and applicants must have a US bank account, ACH transfer
+                            capability, or international USD services like <strong>Wise, Payoneer, or Telegram
+                                Wallet</strong>.
+                        </p>
+                    </div>
+                </div>
+                <button onclick="openModal('faq-payment')"
+                    class="shrink-0 bg-white text-slate-900 font-bold px-5 py-3 rounded-xl hover:bg-slate-100 transition-colors text-sm shadow-md">
+                    Payment Guidelines
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest block mb-2">Available
+                    Remote Projects</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">Current Work From Home
+                    Openings</h2>
+                <p class="mt-3 text-slate-600 text-base">Select a project, review task details and remuneration, then
+                    contact our HR team or submit your portfolio directly on Telegram.</p>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="max-w-4xl mx-auto mb-10 flex flex-col sm:flex-row items-center gap-4">
+                <!-- Search Box -->
+                <div class="relative w-full sm:flex-1">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="job-search" placeholder="Search by job title or keyword..."
+                        class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white text-sm shadow-sm">
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex items-center gap-2 w-full sm:w-auto overflow-x-auto pb-2 sm:pb-0">
+                    <button onclick="filterJobs('all')"
+                        class="filter-btn active px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap bg-brand-600 text-white transition-all shadow-sm"
+                        data-category="all">All Jobs</button>
+                    <button onclick="filterJobs('data')"
+                        class="filter-btn px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all"
+                        data-category="data">Data Entry</button>
+                    <button onclick="filterJobs('design')"
+                        class="filter-btn px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all"
+                        data-category="design">Graphic Design</button>
+                    <button onclick="filterJobs('voice')"
+                        class="filter-btn px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all"
+                        data-category="voice">Voice & Audio</button>
+                    <button onclick="filterJobs('content')"
+                        class="filter-btn px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all"
+                        data-category="content">Writing</button>
+                </div>
+            </div>
+
+            <!-- Job Listings Grid -->
+            <div id="job-grid" class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+                <!-- Job Card 1: Data Entry -->
+                <div class="job-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                    data-category="data" data-title="data entry operator ms excel PDF typing">
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-file-excel"></i>
+                            </div>
+                            <span
+                                class="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1">
+                                <i class="fa-solid fa-bolt text-[10px]"></i> Active Hiring
+                            </span>
+                        </div>
+
+                        <div class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-1">Data Entry</div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Excel & Spreadsheet Data
+                            Specialist</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Convert PDF records, scanned invoice
+                            documents, and customer logs into structured MS Excel sheets with high accuracy.</p>
+
+                        <div class="grid grid-cols-2 gap-3 mb-6 bg-slate-50 p-3 rounded-xl text-xs">
+                            <div>
+                                <span class="text-slate-500 block">Payout Rate:</span>
+                                <span class="font-bold text-slate-900 text-sm">$18 - $25 / Hour</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Skill Level:</span>
+                                <span class="font-semibold text-slate-800">Beginner to Intermediate</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Payment Currency:</span>
+                                <span class="font-semibold text-emerald-600">USD ($) Direct</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Registration Fee:</span>
+                                <span class="font-bold text-emerald-600">$0.00 Free</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Requirements:
+                            </h4>
+                            <ul class="text-xs text-slate-600 space-y-1">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Good typing speed (min. 35 WPM)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Computer / Laptop with MS Office or Google Sheets</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Telegram account for daily submissions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
+                        <button onclick="openApplyModal('Excel & Spreadsheet Data Specialist', '$18 - $25 / Hour')"
+                            class="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-brand-600 hover:bg-brand-700 text-white transition-colors">
+                            Apply / Submit Project
+                        </button>
+                        <button onclick="openModal('hr')"
+                            class="w-full sm:w-auto py-2.5 px-3 rounded-xl font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center gap-1">
+                            <i class="fa-brands text-sky-500"></i> HR
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Job Card 2: Graphic Design -->
+                <div class="job-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                    data-category="design" data-title="graphic designer social media banners photoshop canva">
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <span
+                                class="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1">
+                                <i class="fa-solid fa-bolt text-[10px]"></i> Active Hiring
+                            </span>
+                        </div>
+
+                        <div class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-1">Graphic Design
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Social Media Graphics & Banner
+                            Creator</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Design engaging promotional banners,
+                            Instagram carousels, and YouTube thumbnails for e-commerce and corporate clients.</p>
+
+                        <div class="grid grid-cols-2 gap-3 mb-6 bg-slate-50 p-3 rounded-xl text-xs">
+                            <div>
+                                <span class="text-slate-500 block">Payout Rate:</span>
+                                <span class="font-bold text-slate-900 text-sm">$25 - $40 / Design</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Skill Level:</span>
+                                <span class="font-semibold text-slate-800">Intermediate</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Payment Currency:</span>
+                                <span class="font-semibold text-emerald-600">USD ($) Direct</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Registration Fee:</span>
+                                <span class="font-bold text-emerald-600">$0.00 Free</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Requirements:
+                            </h4>
+                            <ul class="text-xs text-slate-600 space-y-1">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Proficiency in Photoshop, Illustrator, or Canva</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Creative portfolio or sample designs</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Ability to meet 24-hour turnaround deadlines</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
+                        <button onclick="openApplyModal('Social Media Graphics Creator', '$25 - $40 / Design')"
+                            class="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-brand-600 hover:bg-brand-700 text-white transition-colors">
+                            Apply / Submit Project
+                        </button>
+                        <button onclick="openModal('hr')"
+                            class="w-full sm:w-auto py-2.5 px-3 rounded-xl font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center gap-1">
+                            <i class="fa-brands text-sky-500"></i> HR
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Job Card 3: Voice Recording & Audio -->
+                <div class="job-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                    data-category="voice" data-title="voice recording audio transcription voiceover voice actor">
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+                            <span
+                                class="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1">
+                                <i class="fa-solid fa-bolt text-[10px]"></i> Active Hiring
+                            </span>
+                        </div>
+
+                        <div class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-1">Voice & Audio
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Voiceover & Audio Transcription
+                            Artist</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Record short audio scripts for e-learning
+                            modules or transcribe podcast clips into clean English text files.</p>
+
+                        <div class="grid grid-cols-2 gap-3 mb-6 bg-slate-50 p-3 rounded-xl text-xs">
+                            <div>
+                                <span class="text-slate-500 block">Payout Rate:</span>
+                                <span class="font-bold text-slate-900 text-sm">$30 - $60 / Project</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Skill Level:</span>
+                                <span class="font-semibold text-slate-800">All Levels Welcome</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Payment Currency:</span>
+                                <span class="font-semibold text-emerald-600">USD ($) Direct</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Registration Fee:</span>
+                                <span class="font-bold text-emerald-600">$0.00 Free</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Requirements:
+                            </h4>
+                            <ul class="text-xs text-slate-600 space-y-1">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Clear voice and good English pronunciation</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Quiet recording environment or smartphone microphone</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Ability to export MP3 or WAV audio formats</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
+                        <button
+                            onclick="openApplyModal('Voiceover & Audio Transcription Artist', '$30 - $60 / Project')"
+                            class="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-brand-600 hover:bg-brand-700 text-white transition-colors">
+                            Apply / Submit Project
+                        </button>
+                        <button onclick="openModal('hr')"
+                            class="w-full sm:w-auto py-2.5 px-3 rounded-xl font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center gap-1">
+                            <i class="fa-brands text-sky-500"></i> HR
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Job Card 4: Micro Tasks & Content -->
+                <div class="job-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                    data-category="content" data-title="content writing micro tasks article rewriting proofreading">
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-pen-nib"></i>
+                            </div>
+                            <span
+                                class="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200 flex items-center gap-1">
+                                <i class="fa-solid fa-bolt text-[10px]"></i> Active Hiring
+                            </span>
+                        </div>
+
+                        <div class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-1">Micro Tasks &
+                            Writing</div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Content Rewriting & Product
+                            Review Specialist</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">Write short product descriptions,
+                            summarize articles, and perform basic website QA feedback micro-tasks.</p>
+
+                        <div class="grid grid-cols-2 gap-3 mb-6 bg-slate-50 p-3 rounded-xl text-xs">
+                            <div>
+                                <span class="text-slate-500 block">Payout Rate:</span>
+                                <span class="font-bold text-slate-900 text-sm">$15 - $30 / Task</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Skill Level:</span>
+                                <span class="font-semibold text-slate-800">Beginner</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Payment Currency:</span>
+                                <span class="font-semibold text-emerald-600">USD ($) Direct</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Registration Fee:</span>
+                                <span class="font-bold text-emerald-600">$0.00 Free</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Requirements:
+                            </h4>
+                            <ul class="text-xs text-slate-600 space-y-1">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Basic written English grammar</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Smartphone or laptop access</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                    Direct updates via Telegram channel</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
+                        <button onclick="openApplyModal('Content Rewriting Specialist', '$15 - $30 / Task')"
+                            class="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-brand-600 hover:bg-brand-700 text-white transition-colors">
+                            Apply / Submit Project
+                        </button>
+                        <button onclick="openModal('hr')"
+                            class="w-full sm:w-auto py-2.5 px-3 rounded-xl font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center gap-1">
+                            <i class="fa-brands text-sky-500"></i> HR
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Empty search state -->
+            <div id="no-jobs" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 mt-6">
+                <i class="fa-solid fa-folder-open text-4xl text-slate-300 mb-3 block"></i>
+                <h3 class="font-bold text-slate-800">No matching projects found</h3>
+                <p class="text-sm text-slate-500 mt-1">Try searching for alternative terms or reset the category
+                    filters.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest block mb-2">Step-By-Step
+                    Process</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900">How WorkSphere Works</h2>
+                <p class="mt-3 text-slate-600">Start working in four easy steps without paying any registration fees or
+                    hidden costs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 relative">
+
+                <!-- Step 1 -->
+                <div class="relative bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center">
+                    <div
+                        class="w-12 h-12 bg-brand-600 text-white rounded-xl font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-md shadow-brand-500/30">
+                        1
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Select a Project</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Choose from data entry, graphic design, voice
+                        recording, or micro-writing tasks matching your skill set.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center">
+                    <div
+                        class="w-12 h-12 bg-brand-600 text-white rounded-xl font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-md shadow-brand-500/30">
+                        2
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Contact HR Manager</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Reach out directly on Telegram to receive task
+                        guidelines, raw files, and project specifications.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center">
+                    <div
+                        class="w-12 h-12 bg-brand-600 text-white rounded-xl font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-md shadow-brand-500/30">
+                        3
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Complete & Submit</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Finish your work and upload files directly via
+                        Telegram submission portal or HR chat.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center">
+                    <div
+                        class="w-12 h-12 bg-emerald-600 text-white rounded-xl font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-md shadow-emerald-500/30">
+                        4
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Get Paid in USD</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Receive instant compensation in USD directly into
+                        your US Bank account, Wise, or Telegram wallet.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-brand-600 font-extrabold text-xs uppercase tracking-widest block mb-2">Help &
+                    Clarity</span>
+                <h2 class="font-heading text-3xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(1)"
+                        class="w-full text-left p-5 font-bold text-slate-900 flex items-center justify-between gap-4">
+                        <span>Is there any registration fee or security deposit?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-1"
+                        class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        No. WorkSphere Ltd. operates on a zero-fee policy. You will <strong>NEVER</strong> be asked to
+                        pay any registration fee, security deposit, ID verification charge, or training fee.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(2)"
+                        class="w-full text-left p-5 font-bold text-slate-900 flex items-center justify-between gap-4">
+                        <span>Why do I need a US Bank Account or USD Payment Method?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-2"
+                        class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        Our core clients are corporate organizations headquartered in the United States. Salary payouts
+                        are generated directly in USD ($) from US banking institutions. If you are international, you
+                        can receive payouts via Wise (US ACH Routing Number), Payoneer USD account, or Telegram Wallet
+                        USD.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(3)"
+                        class="w-full text-left p-5 font-bold text-slate-900 flex items-center justify-between gap-4">
+                        <span>How do I submit my completed project files?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-3"
+                        class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        You can submit project files directly to our project manager on Telegram or via our Telegram Bot
+                        submission link. Files are reviewed within 12 to 24 hours before payout release.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(4)"
+                        class="w-full text-left p-5 font-bold text-slate-900 flex items-center justify-between gap-4">
+                        <span>Can I apply for multiple project categories?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-4"
+                        class="hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                        Yes! As long as you meet the skill requirements and deadines for each project, you can work on
+                        multiple tasks simultaneously.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-12 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+
+                <!-- Col 1: Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white">
+                            <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9" stroke-width="1.5" stroke-dasharray="2 2" />
+                                <ellipse cx="12" cy="12" rx="9" ry="4" stroke-width="1.5" />
+                                <circle cx="12" cy="12" r="3" class="fill-white/20" />
+                            </svg>
+                        </div>
+                        <span class="font-heading font-extrabold text-2xl tracking-tight text-white">WorkSphere <span
+                                class="text-brand-500">Ltd.</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-md leading-relaxed">
+                        Connecting skilled remote freelancers with vetted global projects. Guaranteed USD payouts,
+                        transparent direct communication via Telegram, and zero registration fees.
+                    </p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <button onclick="openModal('hr')"
+                            class="px-4 py-2 bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded-lg text-xs font-bold hover:bg-sky-500/20 transition-colors">
+                            <i class="fa-brands"></i> Telegram Channel
+                        </button>
+                        <button onclick="openModal('hr')"
+                            class="px-4 py-2 bg-slate-800 text-slate-300 border border-slate-700 rounded-lg text-xs font-bold hover:bg-slate-700 transition-colors">
+                            HR Desk
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-slate-200 mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#jobs" class="hover:text-white transition-colors">Data Entry Jobs</a></li>
+                        <li><a href="#jobs" class="hover:text-white transition-colors">Graphic Design Tasks</a></li>
+                        <li><a href="#jobs" class="hover:text-white transition-colors">Audio Transcription</a></li>
+                        <li><a href="#jobs" class="hover:text-white transition-colors">Content Writing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Legal & Payment -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-slate-200 mb-4">Payment Policy</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                        All payments are issued in US Dollars ($). WorkSphere Ltd. does not charge any application or
+                        joining fee.
+                    </p>
+                    <span
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                        <i class="fa-solid fa-shield-halved"></i> 100% Free Verification
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Bottom Credits -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div>&copy; 2026 WorkSphere Ltd. All rights reserved.</div>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-400">Security Guidelines</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Backdrop -->
+    <div id="modal-backdrop"
+        class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden transition-opacity opacity-0"></div>
+
+    <!-- Modal Window -->
+    <div id="modal-box"
+        class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-lg p-4 hidden">
+        <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden relative">
+
+            <!-- Close Button -->
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center font-bold text-sm z-10 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Dynamic Modal Content Containers -->
+
+            <!-- Modal Content 1: Contact HR -->
+            <div id="modal-content-hr" class="p-6 sm:p-8 hidden">
+                <div
+                    class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-brands"></i>
+                </div>
+                <h3 class="font-heading font-extrabold text-2xl text-slate-900">Contact HR Manager</h3>
+                <p class="text-slate-600 text-sm mt-2">Connect directly with the WorkSphere Ltd. recruitment manager on
+                    Telegram to discuss project availability and compensation.</p>
+
+                <div class="my-6 p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs space-y-2">
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Official Telegram HR Handle:</span>
+                        <span class="font-bold text-slate-900">@WorkSphere_HR_Desk</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Working Hours:</span>
+                        <span class="font-bold text-slate-900">24/7 Global Desk</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Registration Fee:</span>
+                        <span class="font-bold text-emerald-600">$0.00 (Free)</span>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <a href="https://t.me/WorkSphere_LCom" target="_blank"
+                        class="w-full py-3.5 px-4 rounded-xl font-bold text-sm bg-sky-500 hover:bg-sky-600 text-white flex items-center justify-center gap-2 shadow-lg shadow-sky-500/25 transition-all">
+                        <i class="fa-brands text-lg"></i> Open Telegram HR Chat
+                    </a>
+                    <button onclick="copyTelegramHandle('@WorkSphere_LCom')"
+                        class="w-full py-3 px-4 rounded-xl font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+                        Copy HR Username (@WorkSphere_LCom)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Content 2: Apply / Submit Work -->
+            <div id="modal-content-submit" class="p-6 sm:p-8 hidden">
+                <div
+                    class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h3 id="apply-job-title" class="font-heading font-extrabold text-2xl text-slate-900">Submit Project Work
+                </h3>
+                <p id="apply-job-payout" class="text-emerald-600 font-bold text-sm mt-1">$0.00 USD Payout</p>
+                <p class="text-slate-600 text-sm mt-2">Projects are submitted directly on Telegram for rapid review and
+                    instant USD payout initiation.</p>
+
+                <div class="my-6 space-y-3">
+                    <div
+                        class="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 flex items-start gap-2">
+                        <i class="fa-solid fa-circle-info text-amber-600 mt-0.5"></i>
+                        <span>Remember: Ensure you have a valid USD bank account (Wise, Payoneer, or US ACH) to receive
+                            your salary upon file approval.</span>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <a href="https://t.me/telegram" target="_blank"
+                        class="w-full py-3.5 px-4 rounded-xl font-bold text-sm bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center gap-2 shadow-lg shadow-brand-500/25 transition-all">
+                        <i class="fa-brands text-lg"></i> Submit Project via Telegram
+                    </a>
+                    <button onclick="closeModal()"
+                        class="w-full py-3 px-4 rounded-xl font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Content 3: Payment FAQ Guidelines -->
+            <div id="modal-content-faq-payment" class="p-6 sm:p-8 hidden">
+                <div
+                    class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+                <h3 class="font-heading font-extrabold text-2xl text-slate-900">USD Payment Guidelines</h3>
+                <p class="text-slate-600 text-sm mt-2">How WorkSphere Ltd. processes payouts for global freelancers:</p>
+
+                <ul class="my-6 space-y-3 text-xs text-slate-600">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
+                        <span><strong>US Bank ACH:</strong> Direct deposit for applicants residing in the US or using
+                            digital US account details.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
+                        <span><strong>Wise / Payoneer USD:</strong> Recommended for international freelancers receiving
+                            USD payouts.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
+                        <span><strong>Zero Deductions:</strong> WorkSphere pays 100% of the agreed USD project rate
+                            without hidden charges.</span>
+                    </li>
+                </ul>
+
+                <button onclick="closeModal()"
+                    class="w-full py-3.5 px-4 rounded-xl font-bold text-sm bg-slate-900 hover:bg-slate-800 text-white transition-colors">
+                    Got It, Continue
+                </button>
+            </div>
+
+            <!-- Toast Alert inside Modal -->
+            <div id="toast-msg"
+                class="hidden absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs py-2 px-4 rounded-full shadow-lg font-medium">
+                Telegram handle copied!
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Job Filtering Logic
+        function filterJobs(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.job-card');
+            let visibleCount = 0;
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('bg-brand-600', 'text-white');
+                    btn.classList.remove('bg-white', 'text-slate-600');
+                } else {
+                    btn.classList.remove('bg-brand-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-slate-600');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            const noJobsEl = document.getElementById('no-jobs');
+            if (visibleCount === 0) {
+                noJobsEl.classList.remove('hidden');
+            } else {
+                noJobsEl.classList.add('hidden');
+            }
+        }
+
+        // Search Keyword Logic
+        const searchInput = document.getElementById('job-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                const cards = document.querySelectorAll('.job-card');
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const titleAndTags = card.getAttribute('data-title').toLowerCase();
+                    if (titleAndTags.includes(query)) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                const noJobsEl = document.getElementById('no-jobs');
+                if (visibleCount === 0) {
+                    noJobsEl.classList.remove('hidden');
+                } else {
+                    noJobsEl.classList.add('hidden');
+                }
+            });
+        }
+
+        // FAQ Toggle Logic
+        function toggleFaq(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            if (answer) {
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            }
+        }
+
+        // Modal Logic
+        const backdrop = document.getElementById('modal-backdrop');
+        const modalBox = document.getElementById('modal-box');
+
+        function openModal(type) {
+            // Hide all sub-contents
+            document.getElementById('modal-content-hr').classList.add('hidden');
+            document.getElementById('modal-content-submit').classList.add('hidden');
+            document.getElementById('modal-content-faq-payment').classList.add('hidden');
+
+            if (type === 'hr') {
+                document.getElementById('modal-content-hr').classList.remove('hidden');
+            } else if (type === 'submit') {
+                document.getElementById('modal-content-submit').classList.remove('hidden');
+            } else if (type === 'faq-payment') {
+                document.getElementById('modal-content-faq-payment').classList.remove('hidden');
+            }
+
+            backdrop.classList.remove('hidden');
+            modalBox.classList.remove('hidden');
+
+            setTimeout(() => {
+                backdrop.classList.add('opacity-100');
+            }, 10);
+        }
+
+        function openApplyModal(jobTitle, payout) {
+            document.getElementById('apply-job-title').innerText = jobTitle;
+            document.getElementById('apply-job-payout').innerText = `Estimated Payout: ${payout} (USD)`;
+            openModal('submit');
+        }
+
+        function closeModal() {
+            backdrop.classList.remove('opacity-100');
+            setTimeout(() => {
+                backdrop.classList.add('hidden');
+                modalBox.classList.add('hidden');
+            }, 200);
+        }
+
+        // Close on backdrop click
+        if (backdrop) {
+            backdrop.addEventListener('click', closeModal);
+        }
+
+        // Copy Telegram Handle with execCommand fallback
+        function copyTelegramHandle(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const toast = document.getElementById('toast-msg');
+            if (toast) {
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+
+</html>
